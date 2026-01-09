@@ -1,100 +1,101 @@
 import "./App.css";
 
 function App() {
+  const base = import.meta.env.BASE_URL; // GitHub Pages-safe paths
+
   return (
-    <main className="page">
-      {/* HERO / HEADER */}
-      <section className="hero animate-fade-in">
-        <div className="hero__card animate-fade-in delay-1">
-          <div className="hero__row">
-            <img
-              className="hero__avatar animate-fade-in delay-2"
-              src="/jason-profile-pic-160.jpg"
-              srcSet="/jason-profile-pic-160.jpg 160w, /jason-profile-pic-320.jpg 320w, /jason-profile-pic-480.jpg 480w"
-              sizes="160px"
-              alt="Jason Angeles"
-              width="160"
-              height="160"
-            />
+    <main className="min-h-screen bg-white text-black">
+      <div className="mx-auto max-w-[1100px] p-6 text-left">
+        {/* HERO / HEADER */}
+        <section className="animate-fade-in">
+          <div className="rounded-2xl border border-gray-200 bg-white p-[18px] shadow-[0_1px_2px_rgba(0,0,0,0.06)] animate-fade-in delay-1">
+            <div className="flex items-center gap-6">
+              <img
+                className="h-40 w-40 flex-shrink-0 rounded-2xl object-cover bg-gray-100 animate-fade-in delay-2"
+                src={`${base}jason-profile-pic-160.jpg`}
+                srcSet={`${base}jason-profile-pic-160.jpg 160w, ${base}jason-profile-pic-320.jpg 320w, ${base}jason-profile-pic-480.jpg 480w`}
+                sizes="160px"
+                alt="Jason Angeles"
+                width="160"
+                height="160"
+              />
 
+              <div className="min-w-0 flex-1">
+                <div className="animate-fade-in delay-2">
+                  <h1 className="m-0 text-[34px] leading-[1.1] font-extrabold">
+                    Jason Angeles
+                  </h1>
 
-
-            <div className="hero__content">
-              <div className="hero__top animate-fade-in delay-2">
-                <div className="hero__titleBlock">
-                  <div className="hero__nameRow">
-                    <h1 className="hero__name">Jason Angeles</h1>
-                  </div>
-
-                  <div className="hero__meta">
+                  <div className="mt-[6px] flex items-center gap-2 text-sm text-gray-700">
                     <img
-                      className="icon"
-                      src="src/assets/location.png"
+                      className="h-4 w-4"
+                      src={`${base}icons/location.png`}
                       alt=""
                       aria-hidden="true"
                       width="16"
                       height="16"
                     />
-                    <span>Metro Manila, Philippines</span>
+                    <span className="truncate">Metro Manila, Philippines</span>
                   </div>
                 </div>
-              </div>
 
-              <p className="hero__tagline animate-fade-in delay-3">
-                Software Developer - 4th Year BS Information Technology at National
-                University Philippines
-              </p>
+                <p className="mt-[14px] text-[18px] text-gray-900 animate-fade-in delay-3">
+                  Software Developer - 4th Year BS Information Technology at National
+                  University Philippines
+                </p>
 
-              <div className="hero__actions animate-fade-in delay-4">
-                <a
-                  className="btn btn--primary inline-flex h-7 md:h-8 items-center rounded-lg px-2.5 md:px-4 text-[8px] md:text-xs font-medium transition-all duration-200 hover:-translate-y-0.5 gap-1 md:gap-1.5 whitespace-nowrap min-h-0"
-                  href="#"
-                >
-                  <img
-                    className="icon"
-                    src="/icons/calendar.svg"
-                    alt=""
-                    aria-hidden="true"
-                    width="16"
-                    height="16"
-                  />
-                  <span>Want to Schedule a Meeting?</span>
-                  <img
-                    className="icon"
-                    src="/icons/arrow.svg"
-                    alt=""
-                    aria-hidden="true"
-                    width="16"
-                    height="16"
-                  />
-                </a>
+                <div className="mt-4 flex flex-wrap items-center gap-3 animate-fade-in delay-4">
+                  <a
+                    href="#"
+                    className="inline-flex items-center gap-2.5 rounded-xl bg-[#111827] px-[14px] py-3 text-sm font-bold text-white no-underline transition-all duration-200 hover:bg-[rgba(17,24,39,0.9)] hover:-translate-y-0.5"
+                  >
+                    <img
+                      className="h-4 w-4"
+                      src={`${base}icons/calendar.svg`}
+                      alt=""
+                      aria-hidden="true"
+                      width="16"
+                      height="16"
+                    />
+                    <span className="text-white">Want to Schedule a Meeting?</span>
+                    <img
+                      className="h-4 w-4"
+                      src={`${base}icons/arrow.svg`}
+                      alt=""
+                      aria-hidden="true"
+                      width="16"
+                      height="16"
+                    />
+                  </a>
 
-
-                <a
-                  className="btn btn--secondary inline-flex h-7 md:h-8 items-center rounded-lg px-2.5 md:px-4 text-[8px] md:text-xs font-medium transition-all duration-200 hover:-translate-y-0.5 gap-1 md:gap-1.5 whitespace-nowrap min-h-0"
-                  href="mailto:you@example.com"
-                >
-                  <img
-                    className="icon"
-                    src="src/assets/email.png"
-                    alt=""
-                    aria-hidden="true"
-                    width="16"
-                    height="16"
-                  />
-                  <span>Send Email</span>
-                </a>
+                  <a
+                    href="mailto:you@example.com"
+                    className="inline-flex items-center gap-2.5 rounded-xl border border-gray-200 bg-white px-[14px] py-3 text-sm font-bold text-[#111827] no-underline transition-all duration-200 hover:bg-gray-50 hover:-translate-y-0.5"
+                  >
+                    <img
+                      className="h-4 w-4"
+                      src={`${base}icons/email.png`}
+                      alt=""
+                      aria-hidden="true"
+                      width="16"
+                      height="16"
+                    />
+                    <span className="text-black">Send Email</span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* REST OF PAGE */}
-      <section className="content animate-fade-in delay-5">
-        <h2>About</h2>
-        <p>Filler text — you’ll replace this with your bio.</p>
-      </section>
+        {/* REST OF PAGE */}
+        <section className="mt-6 animate-fade-in delay-5">
+          <h2 className="text-xl font-bold">About</h2>
+          <p className="mt-2 text-base text-gray-700">
+            Filler text — you’ll replace this with your bio.
+          </p>
+        </section>
+      </div>
     </main>
   );
 }
