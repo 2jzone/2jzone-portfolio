@@ -74,3 +74,12 @@
     color: inherit;
   }
 }
+
+.bento-card {
+  border-radius: 1rem;
+  /* similar to rounded-2xl */
+  border: 1px solid #e5e7eb;
+  /* gray-200 */
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+}

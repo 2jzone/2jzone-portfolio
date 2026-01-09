@@ -8,7 +8,8 @@ function App() {
       <div className="mx-auto max-w-[1100px] p-6 text-left">
         {/* HERO / HEADER */}
         <section className="animate-fade-in">
-          <div className="rounded-2xl border border-gray-200 bg-white p-[18px] shadow-[0_1px_2px_rgba(0,0,0,0.06)] animate-fade-in delay-1">
+          {/* ✅ Removed rounded border + border styling from the header wrapper */}
+          <div className="bg-white p-[18px] animate-fade-in delay-1">
             <div className="flex items-center gap-6">
               <img
                 className="h-40 w-40 flex-shrink-0 rounded-2xl object-cover bg-gray-100 animate-fade-in delay-2"
@@ -45,9 +46,10 @@ function App() {
                 </p>
 
                 <div className="mt-4 flex flex-wrap items-center gap-3 animate-fade-in delay-4">
+                  {/* Primary button */}
                   <a
                     href="#"
-                    className="inline-flex items-center gap-2.5 rounded-xl bg-[#111827] px-[14px] py-3 text-sm font-bold text-white no-underline transition-all duration-200 hover:bg-[rgba(17,24,39,0.9)] hover:-translate-y-0.5"
+                    className="inline-flex h-7 md:h-8 items-center rounded-lg bg-[#111827] px-2.5 md:px-4 text-[8px] md:text-xs font-medium text-white no-underline transition-all duration-200 hover:bg-[rgba(17,24,39,0.9)] hover:-translate-y-0.5 gap-1 md:gap-1.5 whitespace-nowrap min-h-0"
                   >
                     <img
                       className="h-4 w-4"
@@ -68,9 +70,10 @@ function App() {
                     />
                   </a>
 
+                  {/* Secondary button */}
                   <a
                     href="mailto:you@example.com"
-                    className="inline-flex items-center gap-2.5 rounded-xl border border-gray-200 bg-white px-[14px] py-3 text-sm font-bold text-[#111827] no-underline transition-all duration-200 hover:bg-gray-50 hover:-translate-y-0.5"
+                    className="inline-flex h-7 md:h-8 items-center rounded-lg border border-gray-200 bg-white px-2.5 md:px-4 text-[8px] md:text-xs font-medium text-[#111827] no-underline transition-all duration-200 hover:bg-gray-50 hover:-translate-y-0.5 gap-1 md:gap-1.5 whitespace-nowrap min-h-0"
                   >
                     <img
                       className="h-4 w-4"
@@ -83,17 +86,116 @@ function App() {
                     <span className="text-black">Send Email</span>
                   </a>
                 </div>
+
               </div>
             </div>
           </div>
         </section>
 
-        {/* REST OF PAGE */}
-        <section className="mt-6 animate-fade-in delay-5">
-          <h2 className="text-xl font-bold">About</h2>
-          <p className="mt-2 text-base text-gray-700">
-            Filler text — you’ll replace this with your bio.
-          </p>
+        {/* GRID SECTION (BENTO GRID like your reference) */}
+        <section className="mt-6 grid grid-cols-1 md:grid-cols-6 gap-2 animate-fade-in delay-5">
+          {/* Educational Background (vertical, LEFT side on md+) */}
+          <div className="bento-card p-4 col-span-1 md:col-span-2 md:row-span-2 space-y-2 animate-fade-in animation-delay-200 md:order-1">
+            <h3 className="text-lg font-extrabold">Educational Background</h3>
+            <p className="text-sm text-gray-700">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.
+              Praesent libero. Sed cursus ante dapibus diam.
+            </p>
+
+            <div className="space-y-2">
+              <div className="rounded-xl border border-gray-200 bg-gray-50 p-3">
+                <p className="text-sm font-bold text-gray-900">School / University</p>
+                <p className="mt-1 text-sm text-gray-700">
+                  Lorem ipsum — degree, year, honors, etc.
+                </p>
+              </div>
+              <div className="rounded-xl border border-gray-200 bg-gray-50 p-3">
+                <p className="text-sm font-bold text-gray-900">Certifications</p>
+                <p className="mt-1 text-sm text-gray-700">
+                  Lorem ipsum — cert name, issuer, date.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* About (horizontal, RIGHT side on md+) */}
+          <div className="bento-card p-4 col-span-1 md:col-span-4 space-y-2 group animate-fade-in md:order-2">
+            <h2 className="text-xl font-extrabold">About</h2>
+            <p className="text-base text-gray-700">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+
+          {/* Tech Stack */}
+          <div className="bento-card p-4 col-span-1 md:col-span-2 space-y-2 group animate-fade-in md:order-3">
+            <h2 className="text-xl font-extrabold">Tech Stack</h2>
+            <p className="text-sm text-gray-700">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc feugiat velit at
+              pellentesque luctus.
+            </p>
+            <div className="flex flex-wrap gap-2">
+              <span className="rounded-xl border border-gray-200 bg-gray-50 px-3 py-1 text-sm">
+                Lorem
+              </span>
+              <span className="rounded-xl border border-gray-200 bg-gray-50 px-3 py-1 text-sm">
+                Ipsum
+              </span>
+              <span className="rounded-xl border border-gray-200 bg-gray-50 px-3 py-1 text-sm">
+                Dolor
+              </span>
+            </div>
+          </div>
+
+          {/* Socials */}
+          <div className="bento-card p-4 col-span-1 md:col-span-2 space-y-2 group animate-fade-in md:order-4">
+            <h2 className="text-xl font-extrabold">Socials</h2>
+            <p className="text-sm text-gray-700">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor
+              in reprehenderit.
+            </p>
+            <div className="space-y-2">
+              <div className="rounded-xl border border-gray-200 bg-gray-50 p-3 text-sm text-gray-700">
+                Lorem link #1
+              </div>
+              <div className="rounded-xl border border-gray-200 bg-gray-50 p-3 text-sm text-gray-700">
+                Lorem link #2
+              </div>
+              <div className="rounded-xl border border-gray-200 bg-gray-50 p-3 text-sm text-gray-700">
+                Lorem link #3
+              </div>
+            </div>
+          </div>
+
+          {/* Projects (full width row) */}
+          <div className="bento-card p-4 col-span-1 md:col-span-6 space-y-2 group animate-fade-in md:order-5">
+            <h2 className="text-xl font-extrabold">Projects</h2>
+            <p className="text-base text-gray-700">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis
+              unde omnis iste natus error sit voluptatem.
+            </p>
+
+            <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+              <div className="rounded-xl border border-gray-200 bg-gray-50 p-4">
+                <p className="font-bold">Project Title</p>
+                <p className="mt-1 text-sm text-gray-700">
+                  Lorem ipsum summary placeholder.
+                </p>
+              </div>
+              <div className="rounded-xl border border-gray-200 bg-gray-50 p-4">
+                <p className="font-bold">Project Title</p>
+                <p className="mt-1 text-sm text-gray-700">
+                  Lorem ipsum summary placeholder.
+                </p>
+              </div>
+              <div className="rounded-xl border border-gray-200 bg-gray-50 p-4">
+                <p className="font-bold">Project Title</p>
+                <p className="mt-1 text-sm text-gray-700">
+                  Lorem ipsum summary placeholder.
+                </p>
+              </div>
+            </div>
+          </div>
         </section>
       </div>
     </main>
