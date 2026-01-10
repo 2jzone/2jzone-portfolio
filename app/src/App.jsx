@@ -115,6 +115,12 @@ function App() {
                   Lorem ipsum — cert name, issuer, date.
                 </p>
               </div>
+              <div className="rounded-xl border border-gray-200 bg-gray-50 p-3">
+                <p className="text-sm font-bold text-gray-900">Academic Achievements</p>
+                <p className="mt-1 text-sm text-gray-700">
+                  Lorem ipsum — cert name, issuer, date.
+                </p>
+              </div>
             </div>
           </div>
 
@@ -123,16 +129,16 @@ function App() {
             <h2 className="text-xl font-extrabold">About</h2>
             <p className="text-base text-gray-700">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua.
+              incididunt ut labore et dolore magna aliqua. "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
             </p>
           </div>
 
           {/* Tech Stack */}
-          <div className="bento-card p-4 col-span-1 md:col-span-2 space-y-2 group animate-fade-in md:order-3">
+          <div className="bento-card p-4 col-span-1 md:col-span-4 space-y-2 group animate-fade-in md:order-3">
             <h2 className="text-xl font-extrabold">Tech Stack</h2>
             <p className="text-sm text-gray-700">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc feugiat velit at
-              pellentesque luctus.
+              pellentesque luctus. "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
             </p>
             <div className="flex flex-wrap gap-2">
               <span className="rounded-xl border border-gray-200 bg-gray-50 px-3 py-1 text-sm">
@@ -148,7 +154,7 @@ function App() {
           </div>
 
           {/* Socials */}
-          <div className="bento-card p-4 col-span-1 md:col-span-2 space-y-2 group animate-fade-in md:order-4">
+          <div className="bento-card p-4 col-span-1 md:col-span-6 space-y-2 group animate-fade-in md:order-4">
             <h2 className="text-xl font-extrabold">Socials</h2>
             <p className="text-sm text-gray-700">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor
