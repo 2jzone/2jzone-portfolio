@@ -104,9 +104,17 @@ function App() {
 
             <div className="space-y-2">
               <div className="rounded-xl border border-gray-200 bg-gray-50 p-3">
-                <p className="text-sm font-bold text-gray-900">School / University</p>
+                <p className="text-sm font-bold text-gray-900">University</p>
                 <p className="mt-1 text-sm text-gray-700">
-                  Lorem ipsum — degree, year, honors, etc.
+                  National University Manila — 2022 - Present <br />
+                  4th Year Bachelor of Science in Information Technology with Specialization in Mobile and Web Applications <br />
+                </p>
+              </div>
+              <div className="rounded-xl border border-gray-200 bg-gray-50 p-3">
+                <p className="text-sm font-bold text-gray-900">Junior to Senior High School</p>
+                <p className="mt-1 text-sm text-gray-700">
+                  Marikina Science High School — 2016 - 2022 <br />
+                  Graduated with High Honors
                 </p>
               </div>
               <div className="rounded-xl border border-gray-200 bg-gray-50 p-3">
@@ -118,7 +126,7 @@ function App() {
               <div className="rounded-xl border border-gray-200 bg-gray-50 p-3">
                 <p className="text-sm font-bold text-gray-900">Academic Achievements</p>
                 <p className="mt-1 text-sm text-gray-700">
-                  Lorem ipsum — cert name, issuer, date.
+                  Consistent Dean's Lister
                 </p>
               </div>
             </div>
@@ -175,7 +183,14 @@ function App() {
 
           {/* Projects (full width row) */}
           <div className="bento-card p-4 col-span-1 md:col-span-6 space-y-2 group animate-fade-in md:order-5">
-            <h2 className="text-xl font-extrabold">Projects</h2>
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <h2 className="text-xl font-extrabold">Projects</h2>
+              </div>
+              <a className="text-xs text-foreground/70 hover:text-foreground flex items-center gap-1 transition-colors " href="">
+                View All
+              </a>
+            </div>
             <p className="text-base text-gray-700">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis
               unde omnis iste natus error sit voluptatem.
