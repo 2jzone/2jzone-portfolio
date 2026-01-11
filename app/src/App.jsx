@@ -97,23 +97,19 @@ function App() {
           {/* Educational Background (vertical, LEFT side on md+) */}
           <div className="bento-card p-4 col-span-1 md:col-span-2 md:row-span-2 space-y-2 animate-fade-in animation-delay-200 md:order-1">
             <h3 className="text-lg font-extrabold">Educational Background</h3>
-            <p className="text-sm text-gray-700">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.
-              Praesent libero. Sed cursus ante dapibus diam.
-            </p>
+
 
             <div className="space-y-2">
               <div className="rounded-xl border border-gray-200 bg-gray-50 p-3">
-                <p className="text-sm font-bold text-gray-900">University</p>
+                <p className="text-sm font-bold text-gray-900">BS Information Technology</p>
                 <p className="mt-1 text-sm text-gray-700">
-                  National University Manila — 2022 - Present <br />
-                  4th Year Bachelor of Science in Information Technology with Specialization in Mobile and Web Applications <br />
+                  National University Manila
                 </p>
               </div>
               <div className="rounded-xl border border-gray-200 bg-gray-50 p-3">
                 <p className="text-sm font-bold text-gray-900">Junior to Senior High School</p>
                 <p className="mt-1 text-sm text-gray-700">
-                  Marikina Science High School — 2016 - 2022 <br />
+                  Marikina Science High School <br />
                   Graduated with High Honors
                 </p>
               </div>
@@ -126,7 +122,7 @@ function App() {
               <div className="rounded-xl border border-gray-200 bg-gray-50 p-3">
                 <p className="text-sm font-bold text-gray-900">Academic Achievements</p>
                 <p className="mt-1 text-sm text-gray-700">
-                  Consistent Dean's Lister
+                  Consistent Dean's Lister from 1st year - Present
                 </p>
               </div>
             </div>
