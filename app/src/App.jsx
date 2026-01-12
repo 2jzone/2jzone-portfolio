@@ -1,14 +1,51 @@
 import "./App.css";
+import { Link } from "react-router-dom";
 
 function App() {
-  const base = import.meta.env.BASE_URL; // GitHub Pages-safe paths
+  const base = import.meta.env.BASE_URL;
+
+  const featuredProjects = [
+    {
+      title: "Maize Watch",
+      subtitle: "Mobile and Web Application (2025)",
+      description:
+        "IoT-powered corn monitoring system that turns real-time sensor data into prescriptive analytics and ML-driven insights.",
+      tech: ["Flutter", "React", "Node.js", "MongoDB"],
+    },
+    {
+      title: "Refurnish",
+      subtitle: "Next.js | MERN Stack (2025)",
+      description:
+        "Furniture marketplace web app with real-time features and scalable architecture.",
+      tech: [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "Redis",
+        "Socket.io",
+        "Docker",
+        "PNPM",
+        "JWT",
+      ],
+    },
+    {
+      title: "Cycling Ride Generator",
+      subtitle: "Mobile Application (2025)",
+      description:
+        "Flutter app that generates personalized bike routes and displays curated cycling articles.",
+      tech: ["Flutter", "MongoDB"],
+    },
+  ];
 
   return (
     <main className="min-h-screen bg-white text-black">
       <div className="mx-auto max-w-[1100px] p-6 text-left">
         {/* HERO / HEADER */}
         <section className="animate-fade-in">
-          {/* ✅ Removed rounded border + border styling from the header wrapper */}
           <div className="bg-white p-[18px] animate-fade-in delay-1">
             <div className="flex items-center gap-6">
               <img
@@ -46,7 +83,6 @@ function App() {
                 </p>
 
                 <div className="mt-4 flex flex-wrap items-center gap-3 animate-fade-in delay-4">
-                  {/* Primary button */}
                   <a
                     href="#"
                     className="inline-flex h-7 md:h-8 items-center rounded-lg bg-[#111827] px-2.5 md:px-4 text-[8px] md:text-xs font-medium text-white no-underline transition-all duration-200 hover:bg-[rgba(17,24,39,0.9)] hover:-translate-y-0.5 gap-1 md:gap-1.5 whitespace-nowrap min-h-0"
@@ -70,7 +106,6 @@ function App() {
                     />
                   </a>
 
-                  {/* Secondary button */}
                   <a
                     href="mailto:you@example.com"
                     className="inline-flex h-7 md:h-8 items-center rounded-lg border border-gray-200 bg-white px-2.5 md:px-4 text-[8px] md:text-xs font-medium text-[#111827] no-underline transition-all duration-200 hover:bg-gray-50 hover:-translate-y-0.5 gap-1 md:gap-1.5 whitespace-nowrap min-h-0"
@@ -86,26 +121,23 @@ function App() {
                     <span className="text-black">Send Email</span>
                   </a>
                 </div>
-
               </div>
             </div>
           </div>
         </section>
 
-        {/* GRID SECTION (BENTO GRID like your reference) */}
+        {/* GRID SECTION */}
         <section className="mt-6 grid grid-cols-1 md:grid-cols-6 gap-2 animate-fade-in delay-5">
-          {/* Educational Background (vertical, LEFT side on md+) */}
+          {/* Educational Background */}
           <div className="bento-card p-4 col-span-1 md:col-span-2 md:row-span-2 space-y-2 animate-fade-in animation-delay-200 md:order-1">
             <h3 className="text-lg font-extrabold">Educational Background</h3>
-
 
             <div className="space-y-2">
               <div className="rounded-xl border border-gray-200 bg-gray-50 p-3">
                 <p className="text-sm font-bold text-gray-900">BS Information Technology</p>
-                <p className="mt-1 text-sm text-gray-700">
-                  National University Manila
-                </p>
+                <p className="mt-1 text-sm text-gray-700">National University Manila</p>
               </div>
+
               <div className="rounded-xl border border-gray-200 bg-gray-50 p-3">
                 <p className="text-sm font-bold text-gray-900">Junior to Senior High School</p>
                 <p className="mt-1 text-sm text-gray-700">
@@ -113,12 +145,14 @@ function App() {
                   Graduated with High Honors
                 </p>
               </div>
+
               <div className="rounded-xl border border-gray-200 bg-gray-50 p-3">
                 <p className="text-sm font-bold text-gray-900">Certifications</p>
                 <p className="mt-1 text-sm text-gray-700">
                   Lorem ipsum — cert name, issuer, date.
                 </p>
               </div>
+
               <div className="rounded-xl border border-gray-200 bg-gray-50 p-3">
                 <p className="text-sm font-bold text-gray-900">Academic Achievements</p>
                 <p className="mt-1 text-sm text-gray-700">
@@ -128,41 +162,138 @@ function App() {
             </div>
           </div>
 
-          {/* About (horizontal, RIGHT side on md+) */}
+          {/* About */}
           <div className="bento-card p-4 col-span-1 md:col-span-4 space-y-2 group animate-fade-in md:order-2">
             <h2 className="text-xl font-extrabold">About</h2>
             <p className="text-base text-gray-700">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+              I’m a Full Stack Developer and BSIT student at National University Manila (Mobile & Web
+              Application specialization) with a strong focus on building end-to-end mobile and web
+              products—from UI/UX to backend services and databases. My work spans IoT + analytics
+              platforms, mobile apps, and responsive web experiences, with hands-on experience across
+              Flutter and React on the front end and Node.js/Express on the backend, backed by
+              MongoDB/Firebase and SQL databases. <br />
+              <br />
+              I led and contributed to projects like Maize Watch, an IoT-powered smart farming system
+              that turns real-time sensor data into prescriptive analytics and machine learning–driven
+              insights, and Refurnish, a marketplace web app built with Next.js, TypeScript, TailwindCSS,
+              Node/Express, MongoDB, Redis, Socket.io, Docker, PNPM, and JWT. Academically, I maintain a
+              3.69 CGWA, have been a consistent Dean’s Lister, and a University Academic Excellence
+              Benefit Scholar—bringing both strong fundamentals and practical execution to every build.
             </p>
           </div>
 
-          {/* Tech Stack */}
-          <div className="bento-card p-4 col-span-1 md:col-span-4 space-y-2 group animate-fade-in md:order-3">
-            <h2 className="text-xl font-extrabold">Tech Stack</h2>
-            <p className="text-sm text-gray-700">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc feugiat velit at
-              pellentesque luctus. "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+          {/* ✅ Tech Stack (LIMITED) */}
+          <div className="bento-card p-4 col-span-1 md:col-span-4 space-y-4 group animate-fade-in md:order-3">
+            <div className="flex items-center justify-between">
+              <h2 className="text-xl font-extrabold">Tech Stack</h2>
+
+              {/* View All button (scrolls to full stack section) */}
+
+              <Link
+                className="text-xs text-foreground/70 hover:text-foreground flex items-center gap-1 transition-colors"
+                to="/tech-stack"
+              >
+                View All
+              </Link>
+
+            </div>
+
+            {/* Frontend */}
+            <div className="space-y-2">
+              <h3 className="text-sm font-semibold text-gray-800">Frontend</h3>
+              <div className="flex flex-wrap gap-2">
+                {["React", "Next.js", "Tailwind CSS", "Bootstrap"].map((tech) => (
+                  <span
+                    key={tech}
+                    className="rounded-xl border border-gray-200 bg-gray-50 px-3 py-1 text-sm"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Backend */}
+            <div className="space-y-2">
+              <h3 className="text-sm font-semibold text-gray-800">Backend</h3>
+              <div className="flex flex-wrap gap-2">
+                {["Node.js", "Express.js"].map((tech) => (
+                  <span
+                    key={tech}
+                    className="rounded-xl border border-gray-200 bg-gray-50 px-3 py-1 text-sm"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Tools & DevOps */}
+            <div className="space-y-2">
+              <h3 className="text-sm font-semibold text-gray-800">Tools &amp; DevOps</h3>
+              <div className="flex flex-wrap gap-2">
+                {["Git", "GitHub", "VS Code", "Eclipse", "Docker", "PNPM"].map((tech) => (
+                  <span
+                    key={tech}
+                    className="rounded-xl border border-gray-200 bg-gray-50 px-3 py-1 text-sm"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Projects */}
+          <div className="bento-card p-4 col-span-1 md:col-span-6 space-y-3 group animate-fade-in md:order-4">
+            <div className="flex items-center justify-between">
+              <h2 className="text-xl font-extrabold">Projects</h2>
+
+              <Link
+                className="text-xs text-foreground/70 hover:text-foreground flex items-center gap-1 transition-colors"
+                to="/projects"
+              >
+                View All
+              </Link>
+            </div>
+
+            <p className="text-base text-gray-700">
+              A few highlights from the apps and platforms I’ve built—spanning IoT + analytics,
+              marketplaces, and mobile experiences.
             </p>
-            <div className="flex flex-wrap gap-2">
-              <span className="rounded-xl border border-gray-200 bg-gray-50 px-3 py-1 text-sm">
-                Lorem
-              </span>
-              <span className="rounded-xl border border-gray-200 bg-gray-50 px-3 py-1 text-sm">
-                Ipsum
-              </span>
-              <span className="rounded-xl border border-gray-200 bg-gray-50 px-3 py-1 text-sm">
-                Dolor
-              </span>
+
+            <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+              {featuredProjects.map((p) => (
+                <div key={p.title} className="rounded-xl border border-gray-200 bg-gray-50 p-4">
+                  <p className="font-bold text-gray-900">{p.title}</p>
+                  <p className="mt-1 text-xs text-gray-600">{p.subtitle}</p>
+                  <p className="mt-2 text-sm text-gray-700">{p.description}</p>
+
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    {p.tech.slice(0, 6).map((t) => (
+                      <span
+                        key={t}
+                        className="rounded-xl border border-gray-200 bg-white px-2.5 py-1 text-xs text-gray-700"
+                      >
+                        {t}
+                      </span>
+                    ))}
+                    {p.tech.length > 6 && (
+                      <span className="rounded-xl border border-gray-200 bg-white px-2.5 py-1 text-xs text-gray-700">
+                        +{p.tech.length - 6}
+                      </span>
+                    )}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
 
           {/* Socials */}
-          <div className="bento-card p-4 col-span-1 md:col-span-6 space-y-2 group animate-fade-in md:order-4">
+          <div className="bento-card p-4 col-span-1 md:col-span-6 space-y-2 group animate-fade-in md:order-5">
             <h2 className="text-xl font-extrabold">Socials</h2>
             <p className="text-sm text-gray-700">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor
-              in reprehenderit.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit.
             </p>
             <div className="space-y-2">
               <div className="rounded-xl border border-gray-200 bg-gray-50 p-3 text-sm text-gray-700">
@@ -173,43 +304,6 @@ function App() {
               </div>
               <div className="rounded-xl border border-gray-200 bg-gray-50 p-3 text-sm text-gray-700">
                 Lorem link #3
-              </div>
-            </div>
-          </div>
-
-          {/* Projects (full width row) */}
-          <div className="bento-card p-4 col-span-1 md:col-span-6 space-y-2 group animate-fade-in md:order-5">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-2">
-                <h2 className="text-xl font-extrabold">Projects</h2>
-              </div>
-              <a className="text-xs text-foreground/70 hover:text-foreground flex items-center gap-1 transition-colors " href="">
-                View All
-              </a>
-            </div>
-            <p className="text-base text-gray-700">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis
-              unde omnis iste natus error sit voluptatem.
-            </p>
-
-            <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
-              <div className="rounded-xl border border-gray-200 bg-gray-50 p-4">
-                <p className="font-bold">Project Title</p>
-                <p className="mt-1 text-sm text-gray-700">
-                  Lorem ipsum summary placeholder.
-                </p>
-              </div>
-              <div className="rounded-xl border border-gray-200 bg-gray-50 p-4">
-                <p className="font-bold">Project Title</p>
-                <p className="mt-1 text-sm text-gray-700">
-                  Lorem ipsum summary placeholder.
-                </p>
-              </div>
-              <div className="rounded-xl border border-gray-200 bg-gray-50 p-4">
-                <p className="font-bold">Project Title</p>
-                <p className="mt-1 text-sm text-gray-700">
-                  Lorem ipsum summary placeholder.
-                </p>
               </div>
             </div>
           </div>
