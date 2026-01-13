@@ -2,12 +2,12 @@
 import { Link } from "react-router-dom";
 
 const TECH_STACK = [
-    { title: "Languages", items: ["HTML", "CSS", "JavaScript", "TypeScript", "Dart", "Python", "PHP"] },
-    { title: "Frontend", items: ["React", "Next.js", "Tailwind CSS", "Bootstrap"] },
-    { title: "Mobile", items: ["Flutter", "Android Studio"] },
-    { title: "Backend", items: ["Node.js", "Express.js"] },
+    { title: "Languages", items: ["HTML", "CSS", "Java", "JavaScript", "TypeScript", "Dart", "Python", "PHP"] },
+    { title: "Frontend", items: ["React", "Next.js", "Tailwind CSS", "Bootstrap", "Laravel", "Vue"] },
+    { title: "Mobile", items: ["Flutter", "Android Studio (Dart)"] },
+    { title: "Backend", items: ["Node.js (JavaScript/TypeScript)", "Express.js", "PHP"] },
     { title: "Databases", items: ["MongoDB", "Firebase", "MySQL", "MS SQL"] },
-    { title: "Tools & DevOps", items: ["Git", "GitHub", "VS Code", "Eclipse", "Docker", "PNPM"] },
+    { title: "Tools & DevOps", items: ["Figma", "Git", "GitHub", "VS Code", "Eclipse", "Docker", "PNPM"] },
     { title: "Realtime & Auth", items: ["Redis", "Socket.io", "JWT"] },
 ];
 

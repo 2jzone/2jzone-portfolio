@@ -34,6 +34,22 @@ const PROJECTS = [
         ],
     },
     {
+        title: "New Era AIMS (Internship)",
+        subtitle: "Company Information System (2025)",
+        description:
+            "A company website that streamlines company transactions such as asset management, purchase transactions, procurement management, IT portal, and company directory",
+        tech: [
+            "Laravel",
+            "Vue.js",
+            "Intertia.js",
+            "Axios",
+            "Vuetify",
+            "Tailwind CSS",
+            "PHP",
+            "MySQL"
+        ],
+    },
+    {
         title: "Cycling Ride Generator",
         subtitle: "Mobile Application (2025)",
         description:
@@ -84,7 +100,7 @@ export default function Projects() {
                 </h1>
 
                 <p className="mt-2 text-base text-gray-700">
-                    Selected projects across web, mobile, and IoT + analytics.
+                    Projects that I have done or contributed to so far.
                 </p>
 
                 <div className="mt-8 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">

@@ -78,7 +78,7 @@ function App() {
                 </div>
 
                 <p className="mt-[14px] text-[18px] text-gray-900 animate-fade-in delay-3">
-                  Software Developer - 4th Year BS Information Technology at National
+                  Fullstack Developer - 4th Year BS Information Technology at National
                   University Philippines
                 </p>
 
@@ -156,7 +156,8 @@ function App() {
               <div className="rounded-xl border border-gray-200 bg-gray-50 p-3">
                 <p className="text-sm font-bold text-gray-900">Academic Achievements</p>
                 <p className="mt-1 text-sm text-gray-700">
-                  Consistent Dean's Lister from 1st year - Present
+                  Consistent Dean's Lister from 1st year - Present <br />
+                  Current CGWA - 3.71
                 </p>
               </div>
             </div>
@@ -174,10 +175,10 @@ function App() {
               MongoDB/Firebase and SQL databases. <br />
               <br />
               I led and contributed to projects like Maize Watch, an IoT-powered smart farming system
-              that turns real-time sensor data into prescriptive analytics and machine learning–driven
+              that turns real-time sensor data into prescriptive analytics–driven
               insights, and Refurnish, a marketplace web app built with Next.js, TypeScript, TailwindCSS,
               Node/Express, MongoDB, Redis, Socket.io, Docker, PNPM, and JWT. Academically, I maintain a
-              3.69 CGWA, have been a consistent Dean’s Lister, and a University Academic Excellence
+              3.71 CGWA, have been a consistent Dean’s Lister, and a University Academic Excellence
               Benefit Scholar—bringing both strong fundamentals and practical execution to every build.
             </p>
           </div>
