@@ -291,7 +291,7 @@ function App() {
           </div>
 
           {/* Socials */}
-          <div className="bento-card p-4 col-span-1 md:col-span-6 space-y-2 group animate-fade-in md:order-5">
+          <div className="bento-card p-4 col-span-1 md:col-span-3 space-y-2 group animate-fade-in md:order-5">
             <h2 className="text-xl font-extrabold">Socials</h2>
             <p className="text-sm text-gray-700">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit.
@@ -305,6 +305,36 @@ function App() {
               </div>
               <div className="rounded-xl border border-gray-200 bg-gray-50 p-3 text-sm text-gray-700">
                 Lorem link #3
+              </div>
+            </div>
+          </div>
+
+          <div className="bento-card p-4 col-span-1 md:col-span-3 space-y-2 group animate-fade-in md:order-6">
+            <h2 className="text-xl font-extrabold">References</h2>
+            <p className="text-sm text-gray-700">
+
+            </p>
+            <div className="space-y-2">
+              <div className="rounded-xl border border-gray-200 bg-gray-50 p-3 text-sm text-gray-700">
+                Juan Antonio Gonzales <br />
+                Senior Web Developer - New Era Caps<br />
+              </div>
+              <div className="rounded-xl border border-gray-200 bg-gray-50 p-3 text-sm text-gray-700">
+                Teymour Charles Villanueva <br />
+                Junior Web Developer - New Era Caps<br />
+
+              </div>
+              <div className="rounded-xl border border-gray-200 bg-gray-50 p-3 text-sm text-gray-700">
+                Elizer Jr. D. Ponio <br />
+                Professor - National University Manila <br />
+                E-Mail: ejrdponio@national-u.edu.ph <br />
+                Mobile: 09434672862 <br />
+              </div>
+              <div className="rounded-xl border border-gray-200 bg-gray-50 p-3 text-sm text-gray-700">
+                Frederick E. Dador <br />
+                Professor - National University Manila <br />
+                E-Mail: fedador@national-u.edu.ph <br />
+                Mobile: 09452454330 <br />
               </div>
             </div>
           </div>
