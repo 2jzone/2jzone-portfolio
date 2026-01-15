@@ -11,7 +11,7 @@ const PROJECTS = [
         subtitle: "Mobile and Web Application (2025)",
         description:
             "IoT-powered corn monitoring system that turns real-time sensor data into prescriptive analytics and ML-driven insights.",
-        tech: ["Flutter", "React", "Node.js", "MongoDB"],
+        tech: ["Flutter", "React", "Tailwind CSS", "Node.js (TypeScript)", "Express", "Arduino", "Thingspeak", "Python", "Socket.io", "nginx", "MongoDB Atlas"],
     },
     {
         title: "Refurnish",
@@ -37,7 +37,7 @@ const PROJECTS = [
         title: "New Era AIMS (Internship)",
         subtitle: "Company Information System (2025)",
         description:
-            "A company website that streamlines company transactions such as asset management, purchase transactions, procurement management, IT portal, and company directory",
+            "A company website that streamlines company transactions such as asset management, purchase transactions, procurement management, IT portal, and company directory.",
         tech: [
             "Laravel",
             "Vue.js",
@@ -46,7 +46,8 @@ const PROJECTS = [
             "Vuetify",
             "Tailwind CSS",
             "PHP",
-            "MySQL"
+            "MySQL",
+            "Spatie"
         ],
     },
     {

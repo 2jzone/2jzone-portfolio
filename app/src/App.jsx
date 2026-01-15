@@ -133,12 +133,12 @@ function App() {
             <h3 className="text-lg font-extrabold">Educational Background</h3>
 
             <div className="space-y-2">
-              <div className="rounded-xl border border-gray-200 bg-gray-50 p-3">
+              <div className="rounded-xl border border-gray-200 bg-gray-50 p-2">
                 <p className="text-sm font-bold text-gray-900">BS Information Technology</p>
                 <p className="mt-1 text-sm text-gray-700">National University Manila</p>
               </div>
 
-              <div className="rounded-xl border border-gray-200 bg-gray-50 p-3">
+              <div className="rounded-xl border border-gray-200 bg-gray-50 p-2">
                 <p className="text-sm font-bold text-gray-900">Junior to Senior High School</p>
                 <p className="mt-1 text-sm text-gray-700">
                   Marikina Science High School <br />
@@ -146,22 +146,39 @@ function App() {
                 </p>
               </div>
 
-              <div className="rounded-xl border border-gray-200 bg-gray-50 p-3">
+              <div className="rounded-xl border border-gray-200 bg-gray-50 p-2">
                 <p className="text-sm font-bold text-gray-900">Certifications</p>
                 <p className="mt-1 text-sm text-gray-700">
                   Lorem ipsum — cert name, issuer, date.
                 </p>
               </div>
 
-              <div className="rounded-xl border border-gray-200 bg-gray-50 p-3">
+              <div className="rounded-xl border border-gray-200 bg-gray-50 p-2">
                 <p className="text-sm font-bold text-gray-900">Academic Achievements</p>
                 <p className="mt-1 text-sm text-gray-700">
                   Consistent Dean's Lister from 1st year - Present <br />
                   Current CGWA - 3.71
                 </p>
               </div>
+              <div className="rounded-xl border border-gray-200 bg-gray-50 p-2">
+                <p className="text-sm font-bold text-gray-900">Scolarships</p>
+                <p className="mt-1 text-sm text-gray-700">
+                  University Academic Excellence Scholarship (NU-M)<br />
+                  Pasig Academic Scholarship
+                </p>
+              </div>
+              <div className="rounded-xl border border-gray-200 bg-gray-50 p-2">
+                <p className="text-sm font-bold text-gray-900">Extracurricular</p>
+                <p className="mt-1 text-sm text-gray-700">
+                  College of Computing Science and Infromation Technology Student Council - National University Manila Student <br />
+                  Office of the President Committee <br />
+                  Google Developer Groups on Campus NU-M - Chief Finance Officer
+                </p>
+              </div>
             </div>
           </div>
+
+
 
           {/* About */}
           <div className="bento-card p-4 col-span-1 md:col-span-4 space-y-2 group animate-fade-in md:order-2">
@@ -291,25 +308,31 @@ function App() {
           </div>
 
           {/* Socials */}
-          <div className="bento-card p-4 col-span-1 md:col-span-3 space-y-2 group animate-fade-in md:order-5">
+          <div className="bento-card p-4 col-span-1 md:col-span-2 space-y-2 group animate-fade-in md:order-5">
             <h2 className="text-xl font-extrabold">Socials</h2>
             <p className="text-sm text-gray-700">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit.
             </p>
             <div className="space-y-2">
               <div className="rounded-xl border border-gray-200 bg-gray-50 p-3 text-sm text-gray-700">
-                Lorem link #1
+                LinkedIn
               </div>
               <div className="rounded-xl border border-gray-200 bg-gray-50 p-3 text-sm text-gray-700">
-                Lorem link #2
+                Github
               </div>
               <div className="rounded-xl border border-gray-200 bg-gray-50 p-3 text-sm text-gray-700">
-                Lorem link #3
+                Instagram
+              </div>
+              <div className="rounded-xl border border-gray-200 bg-gray-50 p-3 text-sm text-gray-700">
+                LeetCode
+              </div>
+              <div className="rounded-xl border border-gray-200 bg-gray-50 p-3 text-sm text-gray-700">
+                G-Mail
               </div>
             </div>
           </div>
 
-          <div className="bento-card p-4 col-span-1 md:col-span-3 space-y-2 group animate-fade-in md:order-6">
+          <div className="bento-card p-4 col-span-1 md:col-span-4 space-y-2 group animate-fade-in md:order-6">
             <h2 className="text-xl font-extrabold">References</h2>
             <p className="text-sm text-gray-700">
 
@@ -318,11 +341,13 @@ function App() {
               <div className="rounded-xl border border-gray-200 bg-gray-50 p-3 text-sm text-gray-700">
                 Juan Antonio Gonzales <br />
                 Senior Web Developer - New Era Caps<br />
+                E-Mail: juanantoniogonzales47@gmail.com <br />
+                Mobile: 09083531771
               </div>
               <div className="rounded-xl border border-gray-200 bg-gray-50 p-3 text-sm text-gray-700">
                 Teymour Charles Villanueva <br />
                 Junior Web Developer - New Era Caps<br />
-
+                villanuevateymour27@gmail.com
               </div>
               <div className="rounded-xl border border-gray-200 bg-gray-50 p-3 text-sm text-gray-700">
                 Elizer Jr. D. Ponio <br />
