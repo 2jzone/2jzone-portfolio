@@ -1,5 +1,40 @@
 import "./App.css";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faLinkedin,
+  faGithub,
+  faInstagram,
+} from "@fortawesome/free-brands-svg-icons";
+import { faCode, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+
+const SOCIALS = [
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/jason-angeles-91644a2b2/",
+    icon: faLinkedin,
+  },
+  {
+    label: "GitHub",
+    href: "https://github.com/2jzone",
+    icon: faGithub,
+  },
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/_jasonangeles/",
+    icon: faInstagram,
+  },
+  {
+    label: "LeetCode",
+    href: "https://leetcode.com/u/jsnangls/",
+    icon: faCode,
+  },
+  {
+    label: "G-Mail",
+    href: "mailto:jasonsangeles1@gmail.com",
+    icon: faEnvelope,
+  },
+];
 
 function App() {
   const base = import.meta.env.BASE_URL;
@@ -310,25 +345,30 @@ function App() {
           {/* Socials */}
           <div className="bento-card p-4 col-span-1 md:col-span-2 space-y-2 group animate-fade-in md:order-5">
             <h2 className="text-xl font-extrabold">Socials</h2>
+
             <p className="text-sm text-gray-700">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure
+              dolor in reprehenderit.
             </p>
+
             <div className="space-y-2">
-              <div className="rounded-xl border border-gray-200 bg-gray-50 p-3 text-sm text-gray-700">
-                LinkedIn
-              </div>
-              <div className="rounded-xl border border-gray-200 bg-gray-50 p-3 text-sm text-gray-700">
-                Github
-              </div>
-              <div className="rounded-xl border border-gray-200 bg-gray-50 p-3 text-sm text-gray-700">
-                Instagram
-              </div>
-              <div className="rounded-xl border border-gray-200 bg-gray-50 p-3 text-sm text-gray-700">
-                LeetCode
-              </div>
-              <div className="rounded-xl border border-gray-200 bg-gray-50 p-3 text-sm text-gray-700">
-                G-Mail
-              </div>
+              {SOCIALS.map((s) => (
+                <a
+                  key={s.label}
+                  href={s.href}
+                  target={s.href.startsWith("mailto:") ? undefined : "_blank"}
+                  rel={s.href.startsWith("mailto:") ? undefined : "noreferrer"}
+                  className="block rounded-xl border border-gray-200 bg-gray-50 p-3 text-sm text-gray-700
+                       transition hover:bg-gray-100 hover:border-gray-300
+                       focus:outline-none focus:ring-2 focus:ring-black/20"
+                  aria-label={`${s.label} link`}
+                >
+                  <div className="flex items-center gap-3">
+                    <FontAwesomeIcon icon={s.icon} className="text-base" />
+                    <span>{s.label}</span>
+                  </div>
+                </a>
+              ))}
             </div>
           </div>
 

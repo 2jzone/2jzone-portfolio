@@ -8,7 +8,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./index.css";
 import App from "./App.jsx";
 import TechStack from "./pages/TechStack.jsx";
-import Projects from "./pages/Projects.jsx"; // ✅ add
+import Projects from "./pages/Projects.jsx";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
+
+config.autoAddCss = false;
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
