@@ -269,9 +269,14 @@ function App() {
           <div className="bento-card p-4 col-span-1 md:col-span-2 md:row-span-2 space-y-2 animate-fade-in animation-delay-200 md:order-1">
             <h3 className="text-base font-extrabold flex items-center gap-2">
               <FontAwesomeIcon icon={faGraduationCap} />
-              Educational Background
+              Education and Experience
             </h3>
-
+            <div className="rounded-xl border border-gray-200 bg-gray-50 p-2 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md">
+              <p className="text-sm font-bold text-gray-900">Web Development Intern</p>
+              <p className="mt-1 text-sm text-gray-700">
+                Internship at New Era Caps
+              </p>
+            </div>
             <div className="space-y-2">
               <div className="rounded-xl border border-gray-200 bg-gray-50 p-2 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md">
                 <p className="text-sm font-bold text-gray-900">BS Information Technology</p>
@@ -307,14 +312,15 @@ function App() {
                   Pasig Academic Scholarship
                 </p>
               </div>
-              <div className="rounded-xl border border-gray-200 bg-gray-50 p-2 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md">
+              {/* <div className="rounded-xl border border-gray-200 bg-gray-50 p-2 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md">
                 <p className="text-sm font-bold text-gray-900">Extracurricular</p>
                 <p className="mt-1 text-sm text-gray-700">
                   College of Computing Science and Infromation Technology Student Council - National University Manila Student <br />
                   Office of the President Committee <br />
                   Google Developer Groups on Campus NU-M - Chief Finance Officer
                 </p>
-              </div>
+              </div> */}
+
             </div>
           </div>
 
