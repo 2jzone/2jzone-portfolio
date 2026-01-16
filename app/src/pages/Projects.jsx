@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFolderOpen } from "@fortawesome/free-solid-svg-icons";
 
 const PROJECTS = [
     {
@@ -112,33 +114,34 @@ export default function Projects() {
             <div className="mx-auto max-w-[1100px] p-6 text-left">
                 <Link
                     to="/"
-                    className="inline-flex items-center gap-2 text-sm text-gray-700 hover:text-black transition-colors"
+                    className="inline-flex items-center gap-2 px-3 py-1.5 text-sm text-black border border-gray-300 rounded-lg transition-all duration-200 hover:underline hover:-translate-y-0.5"
                 >
                     <span aria-hidden="true">←</span>
                     <span>Back to Home</span>
                 </Link>
 
-                <h1 className="mt-4 text-3xl md:text-4xl font-extrabold tracking-tight">
+                <h1 className="mt-4 text-2xl md:text-3xl font-extrabold tracking-tight flex items-center gap-2">
+                    <FontAwesomeIcon icon={faFolderOpen} />
                     Projects
                 </h1>
 
-                <p className="mt-2 text-base text-gray-700">
+                <p className="mt-2 text-sm text-gray-700">
                     Projects that I have done or contributed to so far.
                 </p>
 
                 <div className="mt-8 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
                     {PROJECTS.map((p) => {
                         const CardInner = (
-                            <div className="rounded-xl border border-gray-200 bg-gray-50 p-4 h-full">
+                            <div className="rounded-xl border border-gray-200 bg-gray-50 p-4 h-full transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md">
                                 <p className="font-bold text-gray-900">{p.title}</p>
-                                <p className="mt-1 text-xs text-gray-600">{p.subtitle}</p>
+                                <p className="mt-1 text-sm text-gray-600">{p.subtitle}</p>
                                 <p className="mt-2 text-sm text-gray-700">{p.description}</p>
 
                                 <div className="mt-3 flex flex-wrap gap-2">
                                     {p.tech.map((t) => (
                                         <span
                                             key={t}
-                                            className="rounded-xl border border-gray-200 bg-white px-2.5 py-1 text-xs text-gray-700"
+                                            className="rounded-xl border border-gray-200 bg-white px-2.5 py-1 text-sm text-gray-700"
                                         >
                                             {t}
                                         </span>
@@ -152,7 +155,7 @@ export default function Projects() {
                                             href={p.href}
                                             target="_blank"
                                             rel="noreferrer"
-                                            className="text-sm underline text-gray-800 hover:text-black"
+                                            className="text-sm underline text-black hover:text-black transition-all duration-200 hover:-translate-y-0.5"
                                             onClick={(e) => e.stopPropagation()}
                                         >
                                             Live
@@ -163,7 +166,7 @@ export default function Projects() {
                                             href={p.github}
                                             target="_blank"
                                             rel="noreferrer"
-                                            className="text-sm underline text-gray-800 hover:text-black"
+                                            className="text-sm underline text-black hover:text-black transition-all duration-200 hover:-translate-y-0.5"
                                             onClick={(e) => e.stopPropagation()}
                                         >
                                             GitHub
@@ -181,7 +184,7 @@ export default function Projects() {
                                 target="_blank"
                                 rel="noreferrer"
                                 aria-label={`${p.title} (opens in new tab)`}
-                                className="block rounded-xl focus:outline-none focus:ring-2 focus:ring-black/20 hover:bg-gray-100 transition"
+                                className="block rounded-xl focus:outline-none focus:ring-2 focus:ring-black/20 hover:bg-gray-100 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md"
                             >
                                 {CardInner}
                             </a>

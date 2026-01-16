@@ -1,16 +1,29 @@
 @import "tailwindcss";
 
+/* Configure Tailwind v4 to use Roboto */
+@theme {
+  --font-family-sans: "Roboto", system-ui, -apple-system, Segoe UI, Arial, sans-serif;
+}
+
 /* Base font + rendering + root layout */
 @layer base {
   :root {
     font-family: "Roboto", system-ui, -apple-system, Segoe UI, Arial, sans-serif;
   }
 
+  * {
+    font-family: "Roboto", system-ui, -apple-system, Segoe UI, Arial, sans-serif;
+  }
+
   body {
     margin: 0;
-    font-family: inherit;
+    font-family: "Roboto", system-ui, -apple-system, Segoe UI, Arial, sans-serif !important;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+
+  html {
+    font-family: "Roboto", system-ui, -apple-system, Segoe UI, Arial, sans-serif;
   }
 
   /* ✅ Restores the centered layout you had before */
@@ -72,6 +85,17 @@
   .btn,
   .btn * {
     color: inherit;
+  }
+
+  /* Set all links with href to black */
+  a, a:visited, a:hover, a:active {
+    color: #000000;
+  }
+
+  /* Exception: keep white text in dark buttons */
+  a.bg-\\[\\#111827\\] span,
+  a.bg-\\[\\#111827\\] {
+    color: #ffffff !important;
   }
 }
 
