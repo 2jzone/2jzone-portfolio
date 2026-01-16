@@ -517,7 +517,7 @@ function App() {
             <div className="space-y-2">
               <div className="rounded-xl border border-gray-200 bg-gray-50 p-3 text-sm text-gray-700 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md">
                 <span className="text-sm font-bold">Juan Antonio Gonzales</span> <br />
-                Senior Web Developer - New Era Caps<br />
+                International MIS Network Engineer - Saudi Arabia Based<br />
                 E-Mail: juanantoniogonzales47@gmail.com <br />
                 Mobile: 09083531771
               </div>
