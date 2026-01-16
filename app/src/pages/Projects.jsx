@@ -62,8 +62,8 @@ const PROJECTS = [
             "MySQL",
             "Spatie",
         ],
-        href: "https://your-live-site.com", // TODO: replace (or remove if private)
-        github: "https://github.com/yourname/new-era-aims", // TODO: replace (or remove if private)
+        // href: "https://your-live-site.com", // TODO: replace (or remove if private)
+        // github: "https://github.com/yourname/new-era-aims", // TODO: replace (or remove if private)
     },
     {
         title: "Cycling Ride Generator",
@@ -71,7 +71,7 @@ const PROJECTS = [
         description:
             "Flutter app that generates personalized bike routes and displays curated cycling articles.",
         tech: ["Flutter", "MongoDB"],
-        href: "https://your-live-site.com", // TODO: replace
+        // href: "https://your-live-site.com", // TODO: replace
         github: "https://github.com/yourname/cycling-ride-generator", // TODO: replace
     },
     {
@@ -79,7 +79,7 @@ const PROJECTS = [
         subtitle: "Mobile UI Replication (2025)",
         description: "Facebook mobile UI replication built using Flutter.",
         tech: ["Flutter"],
-        href: "https://your-live-site.com", // TODO: replace (optional)
+        // href: "https://your-live-site.com", // TODO: replace (optional)
         github: "https://github.com/yourname/facebook-replication", // TODO: replace
     },
     {
@@ -87,7 +87,7 @@ const PROJECTS = [
         subtitle: "Tourism Web Page (2024)",
         description: "Informative tourism web page showcasing Zambales destinations.",
         tech: ["HTML", "CSS"],
-        href: "https://your-live-site.com", // TODO: replace
+        // href: "https://your-live-site.com", // TODO: replace
         github: "https://github.com/yourname/zambales-tour", // TODO: replace
     },
     {
@@ -96,15 +96,30 @@ const PROJECTS = [
         description: "Event management website built for showcasing and organizing events.",
         tech: ["HTML", "CSS", "JavaScript"],
         href: "https://your-live-site.com", // TODO: replace
-        github: "https://github.com/yourname/sinagtala", // TODO: replace
+        github: "https://github.com/2jzone/Sinagtala-Event-Management", // TODO: replace
     },
     {
         title: "Touch My Deck",
         subtitle: "Sorting Game (2022)",
         description: "Sorting game built in Android Studio with Firebase for data handling.",
         tech: ["Android Studio", "Firebase"],
-        href: "https://your-live-site.com", // TODO: replace (optional)
+        // href: "https://your-live-site.com", // TODO: replace (optional)
         github: "https://github.com/yourname/touch-my-deck", // TODO: replace
+    },
+    {
+        title: "HOPPin",
+        subtitle: "Centralized Ride-hailing App (2023)",
+        description: "Figma prototype of a centralized ride-hailing app where the user can easily choose between different prices of rides from different ride-hailing apps.",
+        tech: ["Figma"],
+        figma: "https://www.figma.com/design/iWDld1EnxBcNvjRt44rXLE/HOPPin?node-id=0-1&t=jq0Q4TQRGhgUnZ6x-1", // TODO: replace (optional)
+        // github: "https://github.com/yourname/touch-my-deck", // TODO: replace
+    },
+    {
+        title: "FiloDroids",
+        subtitle: "JavaFX Project (2022)",
+        description: "A Java desktop application designed in SceneBuilder and implemented using JavaFX, that lets users choose and customize FiloDroids based on Philippine culture and ethnicities.",
+        tech: ["JavaFX", "SceneBuilder"],
+        github: "https://github.com/2jzone/FiloDroids",
     },
 ];
 
@@ -172,6 +187,18 @@ export default function Projects() {
                                             GitHub
                                         </a>
                                     )}
+                                    {p.figma && (
+                                        <a
+                                            href={p.figma}
+                                            target="_blank"
+                                            rel="noreferrer"
+                                            className="text-sm underline text-black hover:text-black transition-all duration-200 hover:-translate-y-0.5"
+                                            onClick={(e) => e.stopPropagation()}
+                                        >
+                                            Figma
+                                        </a>
+                                    )}
+
                                 </div>
                             </div>
                         );
