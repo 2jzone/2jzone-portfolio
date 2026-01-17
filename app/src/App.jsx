@@ -530,7 +530,8 @@ function App() {
               <div className="rounded-xl border border-gray-200 bg-gray-50 p-3 text-sm text-gray-700 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md">
                 <span className="text-sm font-bold">Teymour Charles Villanueva</span> <br />
                 Junior Web Developer - New Era Caps<br />
-                villanuevateymour27@gmail.com
+                E-Mail: villanuevateymour27@gmail.com <br />
+                Mobile: 09657527690
               </div>
               <div className="rounded-xl border border-gray-200 bg-gray-50 p-3 text-sm text-gray-700 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md">
                 <span className="text-sm font-bold">Elizer Jr. D. Ponio</span> <br />
