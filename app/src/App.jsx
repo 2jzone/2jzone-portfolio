@@ -218,7 +218,7 @@ function App() {
       {/* Modal for Schedule Meeting */}
       {showModal && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm animate-fade-in"
           onClick={() => setShowModal(false)}
         >
           <div
@@ -242,7 +242,7 @@ function App() {
       {/* Modal for Email Provider Selection */}
       {showEmailModal && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm animate-fade-in"
           onClick={() => setShowEmailModal(false)}
         >
           <div
