@@ -53,6 +53,7 @@ function App() {
   const base = import.meta.env.BASE_URL;
   const [showModal, setShowModal] = useState(false);
   const [showEmailModal, setShowEmailModal] = useState(false);
+  const [showResumeModal, setShowResumeModal] = useState(false);
 
   const handleScheduleMeeting = (e) => {
     e.preventDefault();
@@ -62,6 +63,11 @@ function App() {
   const handleOpenEmailModal = (e) => {
     e.preventDefault();
     setShowEmailModal(true);
+  };
+
+  const handleViewResume = (e) => {
+    e.preventDefault();
+    setShowResumeModal(true);
   };
 
   const handleEmailProvider = (provider) => {
@@ -85,6 +91,49 @@ function App() {
     window.open(url, "_blank");
     setShowEmailModal(false);
   };
+
+  {
+    showResumeModal && (
+      <div
+        className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4"
+        onClick={() => setShowResumeModal(false)}
+      >
+        <div
+          className="bg-white rounded-lg w-full max-w-4xl h-[90vh] flex flex-col shadow-xl"
+          onClick={(e) => e.stopPropagation()}
+        >
+          <div className="flex justify-between items-center p-4 border-b">
+            <h3 className="text-lg font-bold">My Resume</h3>
+            <div className="flex gap-2">
+              {/* Download Link */}
+              <a
+                href={`${base}resume.pdf`}
+                download
+                className="px-3 py-1.5 text-sm font-medium text-blue-600 hover:underline"
+              >
+                Download PDF
+              </a>
+              <button
+                onClick={() => setShowResumeModal(false)}
+                className="text-gray-500 hover:text-black text-xl px-2"
+              >
+                &times;
+              </button>
+            </div>
+          </div>
+
+          {/* PDF Viewer */}
+          <div className="flex-1 w-full overflow-hidden rounded-b-lg">
+            <iframe
+              src={`${base}resume.pdf`}
+              title="Resume Preview"
+              className="w-full h-full border-none"
+            />
+          </div>
+        </div>
+      </div>
+    )
+  }
 
   const featuredProjects = [
     {
@@ -128,6 +177,44 @@ function App() {
 
   return (
     <main className="min-h-screen bg-white text-black">
+      {showResumeModal && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm animate-fade-in"
+          onClick={() => setShowResumeModal(false)}
+        >
+          <div
+            className=" rounded-lg w-full max-w-4xl h-[90vh] flex flex-col shadow-xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* <div className="flex justify-between items-center p-4 border-b">
+              <h3 className="text-lg font-bold">My Resume</h3>
+              <div className="flex gap-2">
+                <a
+                  href={`${base}resume.pdf`}
+                  download
+                  className="px-3 py-1.5 text-sm font-medium text-blue-600 hover:underline"
+                >
+                  Download PDF
+                </a>
+                <button
+                  onClick={() => setShowResumeModal(false)}
+                  className="text-gray-500 hover:text-black text-xl px-2"
+                >
+                  &times;
+                </button>
+              </div>
+            </div> */}
+
+            <div className="flex-1 w-full overflow-hidden rounded-xl">
+              <iframe
+                src={`${base}resume.pdf`}
+                title="Resume Preview"
+                className="w-full h-full border-none"
+              />
+            </div>
+          </div>
+        </div>
+      )}
       {/* Modal for Schedule Meeting */}
       {showModal && (
         <div
@@ -239,6 +326,15 @@ function App() {
                 </p>
 
                 <div className="mt-4 flex flex-wrap items-center gap-3 animate-fade-in delay-4">
+                  <a
+                    href="#"
+                    onClick={handleViewResume} // Add this handler
+                    className="inline-flex h-7 md:h-8 items-center rounded-lg border border-gray-200 bg-white px-2.5 md:px-4 text-[8px] md:text-sm font-medium text-[#111827] no-underline transition-all duration-200 hover:bg-gray-50 hover:-translate-y-0.5 gap-1 md:gap-1.5 whitespace-nowrap min-h-0"
+                  >
+                    <FontAwesomeIcon icon={faAddressCard} className="h-4 w-4" /> {/* Changed icon to address card for variety */}
+                    <span className="text-[#111827]">View Resume</span>
+                  </a>
+
                   <a
                     href="#"
                     onClick={handleScheduleMeeting}
