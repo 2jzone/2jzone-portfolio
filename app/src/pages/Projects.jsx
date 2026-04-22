@@ -152,7 +152,7 @@ export default function Projects() {
                                 <p className="mt-1 text-sm text-gray-600">{p.subtitle}</p>
                                 <p className="mt-2 text-sm text-gray-700">{p.description}</p>
 
-                                <div className="mt-3 flex flex-wrap gap-2">
+                                <div className="mt-3 flex flex-wrap gap-2 mb-4">
                                     {p.tech.map((t) => (
                                         <span
                                             key={t}
@@ -162,15 +162,15 @@ export default function Projects() {
                                         </span>
                                     ))}
                                 </div>
-
+                                <hr className="my-4 border-gray-400" />
                                 {/* Explicit links */}
-                                <div className="mt-4 flex flex-wrap gap-3">
+                                <div className="flex gap-3">
                                     {p.href && (
                                         <a
                                             href={p.href}
                                             target="_blank"
                                             rel="noreferrer"
-                                            className="text-sm underline text-black hover:text-black transition-all duration-200 hover:-translate-y-0.5"
+                                            className="flex-1 text-center px-4 py-2 rounded-lg text-sm font-medium transition-opacity border border-gray-200 bg-white text-[#111827] hover:opacity-80"
                                             onClick={(e) => e.stopPropagation()}
                                         >
                                             Live
@@ -181,10 +181,10 @@ export default function Projects() {
                                             href={p.github}
                                             target="_blank"
                                             rel="noreferrer"
-                                            className="text-sm underline text-black hover:text-black transition-all duration-200 hover:-translate-y-0.5"
+                                            className="px-4 py-2 rounded-lg text-sm font-medium bg-[#111827] md:px-4 text-[8px] md:text-sm no-underline transition-all duration-200 hover:bg-[rgba(17,24,39,0.9)] hover:-translate-y-0.5 gap-1 md:gap-1.5 whitespace-nowrap min-h-0"
                                             onClick={(e) => e.stopPropagation()}
                                         >
-                                            GitHub
+                                            <span class="text-white">GitHub</span>
                                         </a>
                                     )}
                                     {p.figma && (
@@ -192,10 +192,10 @@ export default function Projects() {
                                             href={p.figma}
                                             target="_blank"
                                             rel="noreferrer"
-                                            className="text-sm underline text-black hover:text-black transition-all duration-200 hover:-translate-y-0.5"
+                                            className="px-4 py-2 rounded-lg text-sm font-medium bg-[#111827] md:px-4 text-[8px] md:text-sm no-underline transition-all duration-200 hover:bg-[rgba(17,24,39,0.9)] hover:-translate-y-0.5 gap-1 md:gap-1.5 whitespace-nowrap min-h-0"
                                             onClick={(e) => e.stopPropagation()}
                                         >
-                                            Figma
+                                            <span class="text-white">Figma</span>
                                         </a>
                                     )}
 
