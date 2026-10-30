@@ -1,18 +1,35 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
-
   <meta charset="UTF-8" />
   <link rel="icon" type="image/jpeg" href="/jason-profile-pic.jpg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jason Angeles - Software Developer</title>
+  <title>Jason Angeles — Fullstack Developer</title>
+  <meta name="description" content="Portfolio of Jason Angeles, Fullstack Developer specializing in Mobile & Web Applications. Explore projects, technical skills, and experience." />
+
+  <!-- Google Fonts: Inter & Roboto -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
+
+  <!-- Immediate Theme Initializer to prevent light/dark flash -->
+  <script>
+    (function () {
+      try {
+        const stored = localStorage.getItem("theme");
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        if (stored === "dark" || (!stored && prefersDark)) {
+          document.documentElement.classList.add("dark");
+        } else {
+          document.documentElement.classList.remove("dark");
+        }
+      } catch (e) {}
+    })();
+  </script>
 </head>
 
-<body>
+<body class="bg-white dark:bg-[#09090b] text-zinc-900 dark:text-zinc-100 antialiased selection:bg-zinc-900 selection:text-white dark:selection:bg-zinc-100 dark:selection:text-zinc-900 transition-colors duration-200">
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
 </body>

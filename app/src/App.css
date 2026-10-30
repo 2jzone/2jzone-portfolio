@@ -1,43 +1,34 @@
 @import "tailwindcss";
 
-/* Configure Tailwind v4 to use Roboto */
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
-  --font-family-sans: "Roboto", system-ui, -apple-system, Segoe UI, Arial, sans-serif;
+  --font-family-sans: "Inter", "Roboto", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
-/* Base font + rendering + root layout */
 @layer base {
-  :root {
-    font-family: "Roboto", system-ui, -apple-system, Segoe UI, Arial, sans-serif;
-  }
-
-  * {
-    font-family: "Roboto", system-ui, -apple-system, Segoe UI, Arial, sans-serif;
+  html {
+    scroll-behavior: smooth;
   }
 
   body {
-    margin: 0;
-    font-family: "Roboto", system-ui, -apple-system, Segoe UI, Arial, sans-serif !important;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    font-family: var(--font-family-sans);
   }
 
-  html {
-    font-family: "Roboto", system-ui, -apple-system, Segoe UI, Arial, sans-serif;
-  }
-
-  /* ✅ Restores the centered layout you had before */
   #root {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 24px;
-    text-align: left;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
   }
 }
 
-/* Utility classes you already use in App.jsx */
 @layer utilities {
   @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
     to {
       opacity: 1;
       transform: translateY(0);
@@ -46,29 +37,15 @@
 
   .animate-fade-in {
     opacity: 0;
-    transform: translateY(10px);
-    animation: fadeInUp 650ms ease forwards;
+    transform: translateY(12px);
+    animation: fadeInUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   }
 
-  .delay-1 {
-    animation-delay: 80ms;
-  }
-
-  .delay-2 {
-    animation-delay: 160ms;
-  }
-
-  .delay-3 {
-    animation-delay: 240ms;
-  }
-
-  .delay-4 {
-    animation-delay: 320ms;
-  }
-
-  .delay-5 {
-    animation-delay: 400ms;
-  }
+  .delay-1 { animation-delay: 60ms; }
+  .delay-2 { animation-delay: 120ms; }
+  .delay-3 { animation-delay: 180ms; }
+  .delay-4 { animation-delay: 240ms; }
+  .delay-5 { animation-delay: 300ms; }
 
   @media (prefers-reduced-motion: reduce) {
     .animate-fade-in {
@@ -77,33 +54,4 @@
       transform: none;
     }
   }
-}
-
-/* Optional: prevents nested span text from turning blue */
-@layer components {
-
-  .btn,
-  .btn * {
-    color: inherit;
-  }
-
-  /* Set all links with href to black */
-  a, a:visited, a:hover, a:active {
-    color: #000000;
-  }
-
-  /* Exception: keep white text in dark buttons */
-  a.bg-\\[\\#111827\\] span,
-  a.bg-\\[\\#111827\\] {
-    color: #ffffff !important;
-  }
-}
-
-.bento-card {
-  border-radius: 1rem;
-  /* similar to rounded-2xl */
-  border: 1px solid #e5e7eb;
-  /* gray-200 */
-  background: #fff;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
 }
